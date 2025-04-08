@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CodingTask3.Task3b</StartupObject>
+    <StartupObject>CodingTask4.Task4f</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,14 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodingTask1\Task1a.cs" />
+    <Compile Include="CodingTask1\Task1b.cs" />
+    <Compile Include="CodingTask1\Task1c.cs" />
+    <Compile Include="CodingTask1\Task1d.cs" />
     <Compile Include="CodingTask2\Task2a.cs" />
     <Compile Include="CodingTask2\Task2b.cs" />
     <Compile Include="CodingTask3\Task3a.cs" />
     <Compile Include="CodingTask3\Task3b.cs" />
-    <Compile Include="Task1a1b.cs" />
+    <Compile Include="CodingTask4\Task4a.cs" />
+    <Compile Include="CodingTask4\Task4b.cs" />
+    <Compile Include="CodingTask4\Task4c.cs" />
+    <Compile Include="CodingTask4\Task4d.cs" />
+    <Compile Include="CodingTask4\Task4e.cs" />
+    <Compile Include="CodingTask4\Task4f.cs" />
+    <Compile Include="CodingTask4\Task4g.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task1c.cs" />
-    <Compile Include="Task1d.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
