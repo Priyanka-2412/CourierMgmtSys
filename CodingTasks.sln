@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingTask", "CodingTask.csproj", "{1F91F426-9BF2-494E-A89E-F610E6BCC720}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingTasks", "CodingTasks.csproj", "{1F91F426-9BF2-494E-A89E-F610E6BCC720}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
