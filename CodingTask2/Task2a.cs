@@ -35,7 +35,7 @@ namespace CodingTask2
                         return;
                     }
 
-                    Console.WriteLine("\n All courier details for a specific customer.  : " + userId);
+                    Console.WriteLine("\nAll courier details for a specific customer.  : " + userId);
                     for (int i = 0; i < rowCount; i++)
                     {
                         Console.WriteLine($"Courier ID: {dt.Rows[i]["CourierID"]}, Sender: {dt.Rows[i]["SenderName"]}, Receiver: {dt.Rows[i]["ReceiverName"]}, Date: {dt.Rows[i]["DeliveryDate"]}, Status: {dt.Rows[i]["CourierStatus"]}");

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CodingTask1.Task1d</StartupObject>
+    <StartupObject>CodingTask4.Task4g</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,13 @@
     <Compile Include="CodingTask4\Task4e.cs" />
     <Compile Include="CodingTask4\Task4f.cs" />
     <Compile Include="CodingTask4\Task4g.cs" />
+    <Compile Include="Entities\Courier.cs" />
+    <Compile Include="Entities\CourierCompany.cs" />
+    <Compile Include="Entities\CourierService.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Locations.cs" />
+    <Compile Include="Entities\Payment.cs" />
+    <Compile Include="Entities\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
