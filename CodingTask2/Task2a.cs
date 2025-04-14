@@ -8,19 +8,19 @@ namespace CodingTask2
     {
         static void Main()
         {
-            Console.Write("Enter UserID: ");
-            string userId = Console.ReadLine();
+            Console.Write("Enter CourierID: ");
+            string courierId = Console.ReadLine();
 
             string connectionString = "Server=(localdb)\\mssqllocaldb; Database=CourierMgmtSys; Integrated Security=True;";
 
-            string query = "SELECT CourierID, SenderName, ReceiverName, DeliveryDate, CourierStatus FROM Courier WHERE UserID = @UserID";
+            string query = "SELECT CourierID, SenderName, ReceiverName, DeliveryDate, CourierStatus FROM Courier WHERE CourierID = @CourierID";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@UserID", userId);
+                    cmd.Parameters.AddWithValue("@CourierID", courierId);
 
                     conn.Open();
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -31,11 +31,11 @@ namespace CodingTask2
 
                     if (rowCount == 0)
                     {
-                        Console.WriteLine("No courier records found for the given Customer ID.");
+                        Console.WriteLine("No courier records found for the given Courier ID.");
                         return;
                     }
 
-                    Console.WriteLine("\nAll courier details for a specific customer.  : " + userId);
+                    Console.WriteLine("\nDetails for Courier ID: " + courierId);
                     for (int i = 0; i < rowCount; i++)
                     {
                         Console.WriteLine($"Courier ID: {dt.Rows[i]["CourierID"]}, Sender: {dt.Rows[i]["SenderName"]}, Receiver: {dt.Rows[i]["ReceiverName"]}, Date: {dt.Rows[i]["DeliveryDate"]}, Status: {dt.Rows[i]["CourierStatus"]}");
