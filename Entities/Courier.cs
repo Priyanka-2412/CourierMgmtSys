@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodingTasks.Entities
 {
-    class Courier
+    public class Courier
     {
         public long CourierID { get; set; }
         public string SenderName { get; set; }
@@ -18,10 +18,14 @@ namespace CodingTasks.Entities
         public string TrackingNumber { get; set; }
         public DateTime DeliveryDate { get; set; }
         public long UserID { get; set; }
+        public long EmployeeID { get; set; }
+        public long LocationID { get; set; }
+        public long ServiceID { get; set; }
+
 
         public Courier() { }
 
-        public Courier(long courierID, string senderName, string senderAddress, string receiverName, string receiverAddress, double weights, string courierStatus, string trackingNumber, DateTime deliveryDate, long userID)
+        public Courier(long courierID, string senderName, string senderAddress, string receiverName, string receiverAddress, double weights, string courierStatus, string trackingNumber, DateTime deliveryDate, long userID, long employeeID, long locationID, long serviceID)
         {
             CourierID = courierID;
             SenderName = senderName;
@@ -33,11 +37,14 @@ namespace CodingTasks.Entities
             TrackingNumber = trackingNumber;
             DeliveryDate = deliveryDate;
             UserID = userID;
+            EmployeeID = employeeID;
+            LocationID = locationID;
+            ServiceID = serviceID;
         }
 
         public override string ToString()
         {
-            return $"CourierID: {CourierID}, Sender: {SenderName}, Receiver: {ReceiverName}, Weights: {Weights}kg, Status: {CourierStatus}, Tracking#: {TrackingNumber}, DeliveryDate: {DeliveryDate.ToShortDateString()}";
+            return $"CourierID: {CourierID}, Sender: {SenderName}, Receiver: {ReceiverName}, Weights: {Weights}kg, Status: {CourierStatus}, Tracking#: {TrackingNumber}, DeliveryDate: {DeliveryDate.ToShortDateString()}, EmployeeID: {EmployeeID}, LocationID: {LocationID}, ServiceID: {ServiceID}";
 
         }
     }

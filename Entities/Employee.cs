@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodingTasks.Entities
 {
-    class Employee
+    public class Employee
     {
         public long EmployeeID { get; set; }
         public string Names { get; set; }
@@ -14,10 +14,12 @@ namespace CodingTasks.Entities
         public string ContactNumber { get; set; }
         public string Roles { get; set; }
         public double Salary { get; set; }
+        public long LocationID { get; set; }
+        public string Passwords { get; set; }
 
         public Employee() { }
 
-        public Employee(long employeeID, string names, string email, string contactNumber, string roles, double salary)
+        public Employee(long employeeID, string names, string email, string contactNumber, string roles, double salary, long locationID, string passwords)
         {
             EmployeeID = employeeID;
             Names = names;
@@ -25,11 +27,13 @@ namespace CodingTasks.Entities
             ContactNumber = contactNumber;
             Roles = roles;
             Salary = salary;
+            LocationID = locationID;
+            Passwords = passwords;
         }
 
         public override string ToString()
         {
-            return $"EmployeeID: {EmployeeID}, Name: {Names}, Role: {Roles}, Salary: ₹{Salary}";
+            return $"EmployeeID: {EmployeeID}, Name: {Names}, Role: {Roles}, Salary: ₹{Salary}, LocationID: {LocationID}, Passwords: {Passwords}";
         }
     }
 }

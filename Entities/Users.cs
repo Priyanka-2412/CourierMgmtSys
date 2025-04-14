@@ -14,10 +14,11 @@ namespace CodingTasks.Entities
         public string Passwords { get; set; }
         public string ContactNumber { get; set; }
         public string UserAddress { get; set; }
+        public string ZipCode { get; set; }
 
         public Users() { }
 
-        public Users(long userID, string names, string email, string passwords, string contactNumber, string userAddress)
+        public Users(long userID, string names, string email, string passwords, string contactNumber, string userAddress, string zipCode)
         {
             UserID = userID;
             Names = Names;
@@ -25,11 +26,12 @@ namespace CodingTasks.Entities
             Passwords = passwords;
             ContactNumber = contactNumber;
             UserAddress = userAddress;
+            ZipCode = zipCode;
         }
 
         public override string ToString()
         {
-            return $"UserID: {UserID}, UserName: {Names}, Email: {Email}, Contact: {ContactNumber}, Address: {UserAddress}";
+            return $"UserID: {UserID}, UserName: {Names}, Email: {Email}, Contact: {ContactNumber}, Address: {UserAddress}, ZipCode: {ZipCode}";
         }
     }
 }

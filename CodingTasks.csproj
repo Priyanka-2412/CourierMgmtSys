@@ -33,10 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CodingTask4.Task4g</StartupObject>
+    <StartupObject>CodingTasks.Main.program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.9.0.4\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,6 +65,10 @@
     <Compile Include="CodingTask4\Task4e.cs" />
     <Compile Include="CodingTask4\Task4f.cs" />
     <Compile Include="CodingTask4\Task4g.cs" />
+    <Compile Include="Dao\CourierAdminServiceImpl.cs" />
+    <Compile Include="Dao\CourierUserServiceImpl.cs" />
+    <Compile Include="Dao\ICourierAdminService.cs" />
+    <Compile Include="Dao\ICourierUserService.cs" />
     <Compile Include="Entities\Courier.cs" />
     <Compile Include="Entities\CourierCompany.cs" />
     <Compile Include="Entities\CourierService.cs" />
@@ -68,10 +76,16 @@
     <Compile Include="Entities\Locations.cs" />
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\Users.cs" />
+    <Compile Include="Exception\InvalidEmployeeIdException.cs" />
+    <Compile Include="Exception\TrackingNotFoundException.cs" />
+    <Compile Include="Main\CourierManagementMenu.cs" />
+    <Compile Include="Main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\DbConnUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
