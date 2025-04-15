@@ -53,7 +53,7 @@ namespace CodingTasks.Dao
                     }
                 }
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
@@ -96,7 +96,7 @@ namespace CodingTasks.Dao
                     return rowsAffected > 0;
                 }
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
@@ -124,7 +124,7 @@ namespace CodingTasks.Dao
                     return result.ToString();
                 }
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
@@ -152,7 +152,7 @@ namespace CodingTasks.Dao
                     return true;
                 }
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
@@ -193,7 +193,7 @@ namespace CodingTasks.Dao
                     throw new InvalidEmployeeIdException($"No assigned orders found for Employee ID {employeeID}.");
                 }
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
@@ -239,7 +239,7 @@ namespace CodingTasks.Dao
 
                 return history;
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
@@ -261,7 +261,7 @@ namespace CodingTasks.Dao
                     return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
                 }
             }
-            catch (SqlException ex)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine($"Database error: {ex.Message}");
                 throw;
