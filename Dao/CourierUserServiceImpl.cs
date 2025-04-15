@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodingTasks.DAO
+namespace CodingTasks.Dao
 {
     public class CourierUserServiceImpl : ICourierUserService
     {
