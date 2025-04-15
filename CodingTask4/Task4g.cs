@@ -24,8 +24,11 @@ namespace CodingTask4
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        string address = reader.GetString(0);
-                        addresses.Add(address);
+                        if (!reader.IsDBNull(0))
+                        {
+                            string address = reader.GetString(0).Trim();
+                            addresses.Add(address);
+                        }
                     }
 
                     reader.Close();
@@ -64,7 +67,6 @@ namespace CodingTask4
         public static void FindSimilarAddresses(List<string> addresses)
         {
             int n = addresses.Count;
-            string[,] similarPairs = new string[n, 2];
             Dictionary<string, bool> seen = new Dictionary<string, bool>();
 
             Console.WriteLine("\nSimilar Addresses Found:\n");
@@ -82,8 +84,6 @@ namespace CodingTask4
                         string key = addresses[i] + "|" + addresses[j];
                         if (!seen.ContainsKey(key))
                         {
-                            similarPairs[i, 0] = addresses[i];
-                            similarPairs[i, 1] = addresses[j];
                             Console.WriteLine($"- {addresses[i]}  ↔  {addresses[j]}");
                             seen[key] = true;
                             found = true;
@@ -120,3 +120,4 @@ namespace CodingTask4
         }
     }
 }
+
