@@ -85,7 +85,7 @@ namespace CodingTask4
     public class Order
     {
         public int CourierID { get; set; }
-        public string CustomerName { get; set; }
+        public string CustomerName { get; set; } // Now mapped from ReceiverName
         public string ReceiverAddress { get; set; }
         public DateTime DeliveryDate { get; set; }
         public string TrackingNumber { get; set; }
@@ -98,10 +98,9 @@ namespace CodingTask4
             Order order = null;
 
             string query = @"
-                SELECT c.CourierID, u.Names, c.ReceiverAddress, c.DeliveryDate, c.TrackingNumber
-                FROM Courier c
-                JOIN Users u ON c.UserID = u.UserID
-                WHERE c.TrackingNumber = @TrackingNumber";
+                SELECT CourierID, ReceiverName, ReceiverAddress, DeliveryDate, TrackingNumber
+                FROM Courier
+                WHERE TrackingNumber = @TrackingNumber";
 
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
