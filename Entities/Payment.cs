@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodingTasks.Entities
 {
-    class Payment
+    public class Payment
     {
         public long PaymentID { get; set; }
         public long CourierID { get; set; }

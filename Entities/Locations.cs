@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodingTasks.Entities
 {
-    class Locations
+    public class Locations
     {
         public long LocationID { get; set; }
         public string LocationName { get; set; }

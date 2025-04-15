@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodingTasks.Entities
 {
-    class Users
+    public class Users
     {
         public long UserID { get; set; }
         public string Names { get; set; }

@@ -9,7 +9,6 @@ using CodingTasks.Entities;
 namespace CodingTasks.Main
 {
    
-    
    public class CourierManagementMenu
     {
        
